@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cooking 😋</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1><span class="title-text">My Cooking</span> 😋</h1>
+      <p class="subtitle">No planning. No stress. Just great food.</p>
+    </header>
+
+    <div class="api-key-section">
+      <input type="password" id="apiKey" placeholder="Enter Gemini API Key" autocomplete="off"
+        title="We need your Gemini API Key to fetch recipes. It is strictly kept in your browser.">
+    </div>
+
+    <main>
+      <div class="input-group">
+        <input type="text" id="ingredient1" placeholder="Ingredient 1 (e.g., Chicken)" aria-label="Ingredient 1">
+        <input type="text" id="ingredient2" placeholder="Ingredient 2 (e.g., Rice)" aria-label="Ingredient 2">
+        <input type="text" id="ingredient3" placeholder="Ingredient 3 (e.g., Broccoli)" aria-label="Ingredient 3">
+      </div>
+
+      <button id="cookBtn" class="magic-btn">
+        <span class="btn-text">Cook Magic</span>
+        <span class="sparkles">✨</span>
+      </button>
+
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Cooking up something special...</p>
+      </div>
+
+      <div id="recipeCard" class="recipe-card hidden">
+        <h2>Your Recipe Magic</h2>
+        <div id="recipeContent" class="recipe-content"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Using marked library to parse markdown safely -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Main app logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>
